@@ -22,10 +22,13 @@ export function startQuiz(sport, type, difficulty = 'all') {
         pool = pool.filter(q => q.difficulty === difficulty);
     }
 
-    // Shuffle and pick 10 (or fewer if not enough questions)
-    const shuffled = pool.sort(() => Math.random() - 0.5);
-    const count = Math.min(10, shuffled.length);
-    const selected = shuffled.slice(0, count);
+    // Fisher-Yates shuffle for uniform randomness
+    for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+    const count = Math.min(10, pool.length);
+    const selected = pool.slice(0, count);
 
     currentQuiz = {
         sport,

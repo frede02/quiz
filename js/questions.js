@@ -562,6 +562,110 @@ export const questions = {
                 answer: "Michel Platini",
                 points: 20,
                 difficulty: "moyen"
+            },
+            {
+                id: "fb_qsj_09",
+                indices: [
+                    "Je suis brésilien, né à São Bernardo do Campo.",
+                    "J'ai été surnommé 'Il Fenomeno'.",
+                    "J'ai marqué 15 buts en Coupe du Monde.",
+                    "J'ai joué au Barça, à l'Inter et au Real.",
+                    "J'ai remporté 2 Coupes du Monde avec le Brésil."
+                ],
+                answer: "Ronaldo Nazário",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_qsj_10",
+                indices: [
+                    "Je suis italien, né à Côme.",
+                    "J'ai passé toute ma carrière dans un seul club.",
+                    "J'ai joué 25 saisons en Serie A.",
+                    "J'ai été défenseur central et latéral gauche.",
+                    "Mon père a aussi joué dans le même club que moi."
+                ],
+                answer: "Paolo Maldini",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_qsj_11",
+                indices: [
+                    "Je suis néerlandais.",
+                    "J'ai inventé le 'football total' avec mon équipe.",
+                    "J'ai joué au FC Barcelone et à l'Ajax.",
+                    "J'ai perdu la finale de Coupe du Monde 1974.",
+                    "Je portais le numéro 14."
+                ],
+                answer: "Johan Cruyff",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_qsj_12",
+                indices: [
+                    "Je suis anglais, né à Leytonstone.",
+                    "J'étais connu pour mes coups francs et mes centres précis.",
+                    "J'ai joué pour 4 grands clubs européens.",
+                    "J'ai été capitaine de l'Angleterre.",
+                    "Je suis aussi connu pour mes coupes de cheveux et ma femme Spice Girl."
+                ],
+                answer: "David Beckham",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_qsj_13",
+                indices: [
+                    "Je suis français, né à Bondy.",
+                    "J'ai marqué en finale de Coupe du Monde à 19 ans.",
+                    "J'ai été le plus jeune buteur français en Coupe du Monde depuis Pelé.",
+                    "J'ai quitté le PSG pour le Real Madrid.",
+                    "Ma vitesse de pointe dépasse les 36 km/h."
+                ],
+                answer: "Kylian Mbappé",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_qsj_14",
+                indices: [
+                    "Je suis argentin, né à Rosario.",
+                    "On m'appelait 'El Ángel'.",
+                    "J'ai joué à Benfica, au Real et au PSG.",
+                    "J'ai marqué un but légendaire contre le Real en Ligue des Champions.",
+                    "Mon nom de famille commence par 'Di'."
+                ],
+                answer: "Ángel Di María",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_qsj_15",
+                indices: [
+                    "Je suis ivoirien.",
+                    "J'ai été élu meilleur joueur africain de l'année 2 fois.",
+                    "J'ai été le capitaine emblématique de Chelsea.",
+                    "J'ai aussi joué à l'Olympique de Marseille.",
+                    "J'ai été surnommé 'le roi Drogba'."
+                ],
+                answer: "Didier Drogba",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_qsj_16",
+                indices: [
+                    "Je suis allemand.",
+                    "J'ai été gardien de but.",
+                    "J'ai remporté la Coupe du Monde 2014.",
+                    "J'ai joué toute ma carrière au Bayern Munich et à Barcelone.",
+                    "Je suis connu pour jouer très haut comme un libéro."
+                ],
+                answer: "Manuel Neuer",
+                points: 20,
+                difficulty: "moyen"
             }
         ],
         carriere: [
@@ -1328,6 +1432,54 @@ export const questions = {
                 explanation: "Froome a gagné en 2013, 2015, 2016 et 2017.",
                 points: 5,
                 difficulty: "moyen"
+            },
+            {
+                id: "cy_vf_19",
+                question: "Fausto Coppi a remporté le Tour de France et le Giro la même année.",
+                correct: true,
+                explanation: "Coppi a réalisé le doublé Tour-Giro en 1949 et 1952.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_vf_20",
+                question: "Le record de l'heure est détenu par un coureur britannique.",
+                correct: false,
+                explanation: "Le record de l'heure est détenu par Filippo Ganna (Italie) avec 56,792 km.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_vf_21",
+                question: "Tom Boonen a remporté plus de Paris-Roubaix que Fabian Cancellara.",
+                correct: true,
+                explanation: "Boonen a gagné 4 Paris-Roubaix contre 3 pour Cancellara.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_vf_22",
+                question: "La Vuelta a España a été créée avant le Tour de France.",
+                correct: false,
+                explanation: "Le Tour de France date de 1903, la Vuelta de 1935.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_vf_23",
+                question: "Wout van Aert a déjà remporté des étapes sur les 3 grands tours.",
+                correct: true,
+                explanation: "Van Aert a gagné des étapes sur le Tour, le Giro et la Vuelta.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_vf_24",
+                question: "Le maillot à pois du Tour de France récompense le meilleur sprinteur.",
+                correct: false,
+                explanation: "Le maillot à pois récompense le meilleur grimpeur. Le maillot vert est celui du meilleur sprinteur.",
+                points: 5,
+                difficulty: "facile"
             }
         ],
         estimation: [
@@ -1544,6 +1696,110 @@ export const questions = {
                 answer: "Miguel Indurain",
                 points: 20,
                 difficulty: "difficile"
+            },
+            {
+                id: "cy_qsj_09",
+                indices: [
+                    "Je suis belge, né à Meensel-Kiezegem.",
+                    "On me surnommait 'Le Cannibale'.",
+                    "J'ai remporté 5 Tours de France et 5 Tours d'Italie.",
+                    "Je détiens le record de victoires d'étapes sur le Tour.",
+                    "J'ai aussi remporté 3 championnats du monde sur route."
+                ],
+                answer: "Eddy Merckx",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "cy_qsj_10",
+                indices: [
+                    "Je suis britannique, né à Gand en Belgique.",
+                    "J'ai remporté le Tour de France 2018.",
+                    "J'ai aussi été champion olympique du contre-la-montre.",
+                    "Je courais pour l'équipe Sky puis Ineos.",
+                    "Mon prénom est Geraint."
+                ],
+                answer: "Geraint Thomas",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_qsj_11",
+                indices: [
+                    "Je suis français.",
+                    "J'ai remporté 5 Tours de France entre 1978 et 1985.",
+                    "On m'appelait 'Le Blaireau'.",
+                    "J'ai remporté aussi 3 Tours d'Italie.",
+                    "Je suis originaire de Bretagne."
+                ],
+                answer: "Bernard Hinault",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "cy_qsj_12",
+                indices: [
+                    "Je suis colombien.",
+                    "J'ai remporté le Tour de France 2019.",
+                    "J'étais surnommé 'le scarabée'.",
+                    "Je suis un grimpeur exceptionnel.",
+                    "J'ai aussi gagné le Tour d'Italie 2021."
+                ],
+                answer: "Egan Bernal",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "cy_qsj_13",
+                indices: [
+                    "Je suis slovène.",
+                    "J'ai remporté 3 Tours de France d'affilée.",
+                    "Je suis aussi double champion sur la Vuelta.",
+                    "J'ai dominé le cyclisme à partir de 2020.",
+                    "Mon équipe s'appelle UAE Team Emirates."
+                ],
+                answer: "Tadej Pogačar",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "cy_qsj_14",
+                indices: [
+                    "Je suis britannique.",
+                    "J'ai remporté 4 Tours de France consécutifs.",
+                    "J'étais connu pour ma maigreur extrême.",
+                    "Je courais pour l'équipe Sky.",
+                    "Mon prénom est Chris."
+                ],
+                answer: "Chris Froome",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "cy_qsj_15",
+                indices: [
+                    "Je suis néerlandais.",
+                    "J'ai été champion du monde sur route.",
+                    "Je suis un spécialiste des classiques.",
+                    "J'ai remporté le Tour des Flandres et l'Amstel Gold Race.",
+                    "Mon fils est aussi devenu un célèbre coureur, champion du monde."
+                ],
+                answer: "Adrie van der Poel",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "cy_qsj_16",
+                indices: [
+                    "Je suis danois.",
+                    "J'ai remporté le Tour de France 2022.",
+                    "J'ai couru pour l'équipe Jumbo-Visma.",
+                    "Je suis un rouleur et un grimpeur polyvalent.",
+                    "Mon prénom est Jonas."
+                ],
+                answer: "Jonas Vingegaard",
+                points: 20,
+                difficulty: "facile"
             }
         ]
     },
@@ -1886,6 +2142,54 @@ export const questions = {
                 explanation: "Elle a atteint la place de n°1 mondiale le 13 septembre 2004.",
                 points: 5,
                 difficulty: "moyen"
+            },
+            {
+                id: "tn_vf_19",
+                question: "Pete Sampras a remporté Roland-Garros au moins une fois.",
+                correct: false,
+                explanation: "Sampras n'a jamais gagné Roland-Garros. Il a remporté 14 Grands Chelems mais aucun sur terre battue.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_vf_20",
+                question: "Le court central de Wimbledon est en gazon naturel.",
+                correct: true,
+                explanation: "Wimbledon est le seul Grand Chelem encore joué sur gazon naturel.",
+                points: 5,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_vf_21",
+                question: "Steffi Graf a réalisé le Grand Chelem doré (4 GC + or olympique) en 1988.",
+                correct: true,
+                explanation: "Graf a remporté les 4 Grands Chelems et l'or olympique à Séoul en 1988.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_vf_22",
+                question: "Le tie-break a été introduit à Wimbledon seulement au 5e set.",
+                correct: false,
+                explanation: "Wimbledon a introduit le tie-break au 5e set seulement en 2022 (à 6-6), avant cela il n'y en avait pas.",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_vf_23",
+                question: "Andre Agassi a remporté les 4 tournois du Grand Chelem dans sa carrière.",
+                correct: true,
+                explanation: "Agassi est l'un des rares joueurs à avoir remporté les 4 GC (Career Grand Slam).",
+                points: 5,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_vf_24",
+                question: "La finale de Wimbledon 2008 entre Federer et Nadal est considérée comme le plus grand match de l'histoire.",
+                correct: true,
+                explanation: "Ce match en 5 sets remporté par Nadal est souvent considéré comme le plus grand match de tennis jamais joué.",
+                points: 5,
+                difficulty: "moyen"
             }
         ],
         estimation: [
@@ -2102,6 +2406,110 @@ export const questions = {
                 answer: "Jannik Sinner",
                 points: 20,
                 difficulty: "moyen"
+            },
+            {
+                id: "tn_qsj_09",
+                indices: [
+                    "Je suis suisse.",
+                    "J'ai remporté 20 titres du Grand Chelem.",
+                    "J'étais connu pour mon élégance sur le court.",
+                    "J'ai détenu le record de semaines à la place de n°1 mondial.",
+                    "J'ai pris ma retraite en 2022 lors de la Laver Cup."
+                ],
+                answer: "Roger Federer",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_qsj_10",
+                indices: [
+                    "Je suis espagnol, né à Manacor.",
+                    "Je suis le 'Roi de la terre battue'.",
+                    "J'ai remporté 14 fois Roland-Garros.",
+                    "J'ai remporté 22 Grands Chelems au total.",
+                    "Mon oncle était aussi mon entraîneur."
+                ],
+                answer: "Rafael Nadal",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_qsj_11",
+                indices: [
+                    "Je suis américaine.",
+                    "J'ai remporté 23 titres du Grand Chelem en simple.",
+                    "Ma sœur est aussi une championne de tennis.",
+                    "J'ai aussi remporté 4 médailles d'or olympiques.",
+                    "Mon service est l'un des plus puissants du tennis féminin."
+                ],
+                answer: "Serena Williams",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_qsj_12",
+                indices: [
+                    "Je suis serbe.",
+                    "J'ai le record de titres en Grand Chelem avec 24.",
+                    "J'ai été n°1 mondial pendant plus de 400 semaines.",
+                    "Je suis connu pour ma flexibilité et mon retour de service.",
+                    "J'ai remporté l'or olympique à Paris 2024."
+                ],
+                answer: "Novak Djokovic",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_qsj_13",
+                indices: [
+                    "Je suis française.",
+                    "J'ai remporté Roland-Garros en 2000.",
+                    "J'ai atteint la place de n°4 mondiale.",
+                    "Je suis devenue capitaine de l'équipe de France de Fed Cup.",
+                    "Mon prénom est Mary."
+                ],
+                answer: "Mary Pierce",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_qsj_14",
+                indices: [
+                    "Je suis suédois.",
+                    "J'ai remporté 6 Roland-Garros et 5 Wimbledon.",
+                    "J'étais surnommé 'Ice Borg'.",
+                    "J'ai pris ma retraite à seulement 26 ans.",
+                    "J'ai remporté 11 titres du Grand Chelem."
+                ],
+                answer: "Björn Borg",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "tn_qsj_15",
+                indices: [
+                    "Je suis espagnol.",
+                    "J'ai remporté l'US Open 2024 à 19 ans.",
+                    "Je suis considéré comme le successeur de Nadal.",
+                    "Mon prénom est Carlos.",
+                    "J'ai été le plus jeune n°1 mondial de l'histoire."
+                ],
+                answer: "Carlos Alcaraz",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "tn_qsj_16",
+                indices: [
+                    "Je suis américain.",
+                    "J'étais connu pour mes colères sur le court.",
+                    "J'ai remporté 7 titres du Grand Chelem.",
+                    "Ma rivalité avec Björn Borg est légendaire.",
+                    "On m'appelait 'Big Mac' ou 'Superbrat'."
+                ],
+                answer: "John McEnroe",
+                points: 20,
+                difficulty: "difficile"
             }
         ]
     }
