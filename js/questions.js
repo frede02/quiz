@@ -563,6 +563,430 @@ export const questions = {
                 points: 20,
                 difficulty: "moyen"
             }
+        ],
+        carriere: [
+            {
+                id: "fb_car_01",
+                clubs: [
+                    { club: "FC Barcelone", periode: "2004 - 2021" },
+                    { club: "Paris Saint-Germain", periode: "2021 - 2023" },
+                    { club: "Inter Miami", periode: "2023 - ..." }
+                ],
+                answer: "Lionel Messi",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_02",
+                clubs: [
+                    { club: "Sporting CP", periode: "2002 - 2003" },
+                    { club: "Manchester United", periode: "2003 - 2009" },
+                    { club: "Real Madrid", periode: "2009 - 2018" },
+                    { club: "Juventus Turin", periode: "2018 - 2021" },
+                    { club: "Manchester United", periode: "2021 - 2022" },
+                    { club: "Al-Nassr", periode: "2023 - ..." }
+                ],
+                answer: "Cristiano Ronaldo",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_03",
+                clubs: [
+                    { club: "AS Cannes", periode: "1988 - 1992" },
+                    { club: "Girondins de Bordeaux", periode: "1992 - 1996" },
+                    { club: "Juventus Turin", periode: "1996 - 2001" },
+                    { club: "Real Madrid", periode: "2001 - 2006" }
+                ],
+                answer: "Zinédine Zidane",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_04",
+                clubs: [
+                    { club: "AS Monaco", periode: "2015 - 2017" },
+                    { club: "Paris Saint-Germain", periode: "2017 - 2024" },
+                    { club: "Real Madrid", periode: "2024 - ..." }
+                ],
+                answer: "Kylian Mbappé",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_05",
+                clubs: [
+                    { club: "Santos FC", periode: "1999 - 2003" },
+                    { club: "FC Barcelone", periode: "2003 - 2013" },
+                    { club: "FC Barcelone", periode: "2013 - 2017" },
+                    { club: "Paris Saint-Germain", periode: "2017 - 2025" },
+                    { club: "Santos FC", periode: "2025 - ..." }
+                ],
+                answer: "Neymar",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_06",
+                clubs: [
+                    { club: "Le Havre AC", periode: "2004 - 2005" },
+                    { club: "Olympique de Marseille", periode: "2005 - 2006" },
+                    { club: "Chelsea FC", periode: "2006 - 2012" },
+                    { club: "Shanghai Shenhua", periode: "2012" },
+                    { club: "Chelsea FC", periode: "2012 - 2014" },
+                    { club: "Galatasaray", periode: "2014" },
+                    { club: "Olympique de Marseille", periode: "2014 - 2015" }
+                ],
+                answer: "Nicolas Anelka",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_07",
+                clubs: [
+                    { club: "Olympique Lyonnais", periode: "1999 - 2008" },
+                    { club: "Real Madrid", periode: "2009 - 2021" },
+                    { club: "Real Madrid (entraîneur)", periode: "coach" }
+                ],
+                answer: "Karim Benzema",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_08",
+                clubs: [
+                    { club: "Dinamo Zagreb", periode: "2005 - 2008" },
+                    { club: "Tottenham Hotspur", periode: "2008 - 2012" },
+                    { club: "Real Madrid", periode: "2012 - 2024" }
+                ],
+                answer: "Luka Modrić",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_09",
+                clubs: [
+                    { club: "SC Freiburg", periode: "1993 - 1997" },
+                    { club: "Borussia Dortmund", periode: "1997 - 2004" },
+                    { club: "Juventus Turin", periode: "2004 - 2006" },
+                    { club: "FC Barcelone", periode: "2006 - 2008" },
+                    { club: "AC Milan", periode: "2008 - 2012" }
+                ],
+                answer: "Zlatan Ibrahimović",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_10",
+                clubs: [
+                    { club: "Manchester United", periode: "1993 - 2003" },
+                    { club: "Real Madrid", periode: "2003 - 2007" },
+                    { club: "LA Galaxy", periode: "2007 - 2012" },
+                    { club: "Paris Saint-Germain", periode: "2013 - 2013" }
+                ],
+                answer: "David Beckham",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_11",
+                clubs: [
+                    { club: "AS Monaco", periode: "1992 - 1997" },
+                    { club: "Juventus Turin", periode: "1997 - 1999" },
+                    { club: "Arsenal", periode: "1999 - 2007" },
+                    { club: "FC Barcelone", periode: "2007 - 2010" },
+                    { club: "New York Red Bulls", periode: "2010 - 2014" }
+                ],
+                answer: "Thierry Henry",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_12",
+                clubs: [
+                    { club: "Olympique de Marseille", periode: "1986 - 1992" },
+                    { club: "AC Milan", periode: "1992 - 1994" },
+                    { club: "Bayern Munich", periode: "1994 - 1996" },
+                    { club: "Bordeaux", periode: "1996 - 1998" }
+                ],
+                answer: "Jean-Pierre Papin",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_13",
+                clubs: [
+                    { club: "Le Mans", periode: "2001 - 2004" },
+                    { club: "Lille OSC", periode: "2004 - 2007" },
+                    { club: "Chelsea FC", periode: "2007 - 2012" },
+                    { club: "Shanghai Shenhua", periode: "2012 - 2013" },
+                    { club: "Galatasaray", periode: "2013" },
+                    { club: "Chelsea FC", periode: "2013 - 2014" },
+                    { club: "Côte d'Ivoire (retraite)", periode: "2014" }
+                ],
+                answer: "Didier Drogba",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_14",
+                clubs: [
+                    { club: "Stade Rennais", periode: "2013 - 2019" },
+                    { club: "Real Madrid", periode: "2019 - ..." }
+                ],
+                answer: "Eduardo Camavinga",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_15",
+                clubs: [
+                    { club: "FC Barcelone", periode: "2018 - 2022" },
+                    { club: "Eintracht Francfort (prêt)", periode: "2021" },
+                    { club: "Stade Rennais (prêt)", periode: "2022" },
+                    { club: "Paris Saint-Germain", periode: "2023 - ..." }
+                ],
+                answer: "Ousmane Dembélé",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_16",
+                clubs: [
+                    { club: "FC Barcelone", periode: "2003 - 2014" },
+                    { club: "New York City FC", periode: "2014 - 2017" },
+                    { club: "Vissel Kobe", periode: "2018 - 2019" }
+                ],
+                answer: "Andrés Iniesta",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_17",
+                clubs: [
+                    { club: "Manchester United", periode: "2004 - 2009" },
+                    { club: "Everton (prêt)", periode: "2006 - 2007" },
+                    { club: "Manchester City", periode: "2009 - 2011" },
+                    { club: "QPR (prêt)", periode: "2012 - 2013" },
+                    { club: "Galatasaray", periode: "2014 - 2016" }
+                ],
+                answer: "Tevez",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_18",
+                clubs: [
+                    { club: "AC Milan", periode: "1995 - 2009" },
+                    { club: "AC Milan", periode: "2011 - 2012" }
+                ],
+                answer: "Paolo Maldini",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_19",
+                clubs: [
+                    { club: "FC Nantes", periode: "1999 - 2003" },
+                    { club: "Olympique de Marseille", periode: "2003 - 2006" },
+                    { club: "Chelsea FC", periode: "2006 - 2009" },
+                    { club: "FC Barcelone", periode: "2009 - 2011" },
+                    { club: "New York Red Bulls", periode: "2016 - 2018" }
+                ],
+                answer: "Florent Malouda",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_20",
+                clubs: [
+                    { club: "Real Madrid Castilla", periode: "1999 - 2003" },
+                    { club: "Real Madrid", periode: "2002 - 2015" },
+                    { club: "Porto", periode: "2015 - 2016" }
+                ],
+                answer: "Iker Casillas",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_21",
+                clubs: [
+                    { club: "Stade Malherbe Caen", periode: "2013 - 2016" },
+                    { club: "Paris Saint-Germain", periode: "2016 - 2019" },
+                    { club: "Everton", periode: "2019 - 2022" },
+                    { club: "Aston Villa", periode: "2022 - 2023" }
+                ],
+                answer: "Lucas Digne",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_22",
+                clubs: [
+                    { club: "SC Internacional", periode: "2006 - 2008" },
+                    { club: "Real Madrid", periode: "2009 - 2014" },
+                    { club: "AS Monaco", periode: "2014 - 2015" },
+                    { club: "Real Madrid", periode: "2015 - 2017" }
+                ],
+                answer: "James Rodríguez",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_23",
+                clubs: [
+                    { club: "Parme FC", periode: "1995 - 2001" },
+                    { club: "Juventus Turin", periode: "2001 - 2006" },
+                    { club: "Paris Saint-Germain", periode: "2012 - 2018" }
+                ],
+                answer: "Gianluigi Buffon",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_24",
+                clubs: [
+                    { club: "Ajax Amsterdam", periode: "2016 - 2019" },
+                    { club: "FC Barcelone", periode: "2019 - 2022" },
+                    { club: "Manchester United (prêt)", periode: "2020" },
+                    { club: "Ajax Amsterdam", periode: "2022" }
+                ],
+                answer: "Frenkie de Jong",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_25",
+                clubs: [
+                    { club: "Sporting CP", periode: "1999 - 2003" },
+                    { club: "Manchester United", periode: "2003 - 2006" },
+                    { club: "Arsenal", periode: "2006 - 2018" }
+                ],
+                answer: "Robin van Persie",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_26",
+                clubs: [
+                    { club: "Bayern Munich", periode: "2000 - 2007" },
+                    { club: "Chelsea FC", periode: "2007 - 2014" },
+                    { club: "New York City FC", periode: "2014 - 2017" }
+                ],
+                answer: "Frank Lampard",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_27",
+                clubs: [
+                    { club: "Lille OSC", periode: "2017 - 2020" },
+                    { club: "AC Milan", periode: "2020 - 2022" },
+                    { club: "Chelsea FC", periode: "2022 - ..." }
+                ],
+                answer: "Rafael Leão",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_28",
+                clubs: [
+                    { club: "FC Barcelone", periode: "1998 - 2000" },
+                    { club: "Paris Saint-Germain", periode: "2001 - 2003" },
+                    { club: "FC Barcelone", periode: "2004 - 2008" }
+                ],
+                answer: "Ronaldinho",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_29",
+                clubs: [
+                    { club: "Manchester United", periode: "1992 - 2011" }
+                ],
+                answer: "Ryan Giggs",
+                points: 20,
+                difficulty: "difficile"
+            },
+            {
+                id: "fb_car_30",
+                clubs: [
+                    { club: "Atletico Madrid", periode: "2011 - 2014" },
+                    { club: "Chelsea FC", periode: "2014 - 2018" },
+                    { club: "Atletico Madrid", periode: "2018 - ..." }
+                ],
+                answer: "Antoine Griezmann",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_31",
+                clubs: [
+                    { club: "SC Corinthians", periode: "2004 - 2005" },
+                    { club: "Real Madrid", periode: "2005 - 2007" },
+                    { club: "AC Milan", periode: "2007 - 2010" },
+                    { club: "Flamengo", periode: "2019 - 2022" }
+                ],
+                answer: "Ronaldo Nazário",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_32",
+                clubs: [
+                    { club: "Borussia Dortmund", periode: "2005 - 2008" },
+                    { club: "Liverpool FC", periode: "2008 - 2015" }
+                ],
+                answer: "Steven Gerrard",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_33",
+                clubs: [
+                    { club: "Southampton", periode: "2012 - 2014" },
+                    { club: "Liverpool FC", periode: "2014 - 2022" },
+                    { club: "Bayern Munich (prêt)", periode: "2022 - 2023" }
+                ],
+                answer: "Sadio Mané",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_34",
+                clubs: [
+                    { club: "Red Bull Salzbourg", periode: "2019 - 2020" },
+                    { club: "Borussia Dortmund", periode: "2020 - 2022" },
+                    { club: "Manchester City", periode: "2022 - ..." }
+                ],
+                answer: "Erling Haaland",
+                points: 20,
+                difficulty: "facile"
+            },
+            {
+                id: "fb_car_35",
+                clubs: [
+                    { club: "US Boulogne", periode: "2007 - 2010" },
+                    { club: "Lille OSC", periode: "2010 - 2013" },
+                    { club: "Tottenham Hotspur", periode: "2013 - 2019" },
+                    { club: "Real Madrid", periode: "2019 - 2022" }
+                ],
+                answer: "Hugo Lloris",
+                points: 20,
+                difficulty: "moyen"
+            },
+            {
+                id: "fb_car_36",
+                clubs: [
+                    { club: "AS Saint-Étienne", periode: "2009 - 2012" },
+                    { club: "Olympique Lyonnais", periode: "2012 - 2013" },
+                    { club: "Liverpool FC", periode: "2013 - 2015" },
+                    { club: "Stoke City", periode: "2015 - 2018" }
+                ],
+                answer: "Kurt Zouma",
+                points: 20,
+                difficulty: "difficile"
+            }
         ]
     },
     cyclisme: {
@@ -1694,5 +2118,6 @@ export const quizTypeLabels = {
     vrai_faux: { name: "Vrai ou Faux", description: "Vrai ou faux ?", icon: "✅" },
     estimation: { name: "Estimation", description: "Trouvez le bon nombre", icon: "🔢" },
     qui_suis_je: { name: "Qui suis-je ?", description: "Devinez le sportif grâce aux indices", icon: "🕵️" },
+    carriere: { name: "Carrière", description: "Devinez le joueur par ses clubs", icon: "🏟️" },
     mix: { name: "Mix", description: "Un peu de tout !", icon: "🎲" }
 };

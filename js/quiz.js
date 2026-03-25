@@ -11,6 +11,8 @@ export function startQuiz(sport, type, difficulty = 'all') {
         }
     } else if (type === 'qui_suis_je') {
         pool = (questions[sport].qui_suis_je || []).map(q => ({ ...q, type: 'qui_suis_je' }));
+    } else if (type === 'carriere') {
+        pool = (questions[sport].carriere || []).map(q => ({ ...q, type: 'carriere' }));
     } else {
         pool = questions[sport][type].map(q => ({ ...q, type }));
     }
@@ -80,18 +82,25 @@ export function submitAnswer(userAnswer) {
         const lastName = nameParts[nameParts.length - 1];
         correct = guess.includes(answer) || guess.includes(lastName);
         earned = correct ? (userAnswer.pointsLeft || q.points) : 0;
+    } else if (q.type === 'carriere') {
+        const guess = (userAnswer.guess || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const answer = q.answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        const nameParts = answer.split(' ');
+        const lastName = nameParts[nameParts.length - 1];
+        correct = guess.includes(answer) || guess.includes(lastName);
+        earned = correct ? (userAnswer.pointsLeft || q.points) : 0;
     }
 
-    // Speed bonus (not for qui_suis_je)
-    if (correct && timeTaken < 5000 && q.type !== 'qui_suis_je') {
+    // Speed bonus (not for qui_suis_je or carriere)
+    if (correct && timeTaken < 5000 && q.type !== 'qui_suis_je' && q.type !== 'carriere') {
         earned += 2;
     }
 
     const result = {
         questionId: q.id,
-        question: q.type === 'qui_suis_je' ? 'Qui suis-je ? ' + q.indices[0] : q.question,
-        userAnswer: q.type === 'qui_suis_je' ? userAnswer.guess : userAnswer,
-        correctAnswer: q.type === 'qui_suis_je' ? q.answer : (q.type === 'estimation' ? q.answer : q.correct),
+        question: q.type === 'qui_suis_je' ? 'Qui suis-je ? ' + q.indices[0] : q.type === 'carriere' ? 'Carrière : ' + q.clubs[0].club : q.question,
+        userAnswer: q.type === 'qui_suis_je' || q.type === 'carriere' ? userAnswer.guess : userAnswer,
+        correctAnswer: q.type === 'qui_suis_je' || q.type === 'carriere' ? q.answer : (q.type === 'estimation' ? q.answer : q.correct),
         correct,
         earned,
         type: q.type,

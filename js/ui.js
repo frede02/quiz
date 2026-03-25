@@ -1,6 +1,6 @@
 import { getCurrentUser, logout } from './auth.js';
 import { navigate } from './router.js';
-import { sportLabels, quizTypeLabels } from './questions.js';
+import { questions, sportLabels, quizTypeLabels } from './questions.js';
 import { startQuiz, getCurrentQuiz, getCurrentQuestion, submitAnswer, nextQuestion, getResults, markQuestionStart, clearQuiz } from './quiz.js';
 import { saveScore, getTopScores, getGlobalRanking, getUserHistory, getUserStats } from './leaderboard.js';
 import { register, login } from './auth.js';
@@ -224,6 +224,13 @@ export function renderCategories() {
             document.getElementById('difficulty-selection').classList.add('hidden');
             document.querySelectorAll('.type-card').forEach(c => c.classList.remove('selected'));
             document.documentElement.style.setProperty('--sport-color', sportLabels[selectedSport].color);
+            // Show/hide type cards based on available data for selected sport
+            document.querySelectorAll('.type-card').forEach(c => {
+                const t = c.dataset.type;
+                const hasData = questions[selectedSport] && questions[selectedSport][t] && questions[selectedSport][t].length > 0;
+                const isMix = t === 'mix';
+                c.style.display = (hasData || isMix) ? '' : 'none';
+            });
         });
     });
 
@@ -301,6 +308,35 @@ function showQuestion() {
             </div>
             <p class="qsj-points-info">Points restants : <strong id="qsj-points-display">${q.points}</strong></p>
         </div>`;
+    } else if (q.type === 'carriere') {
+        answersHTML = `<div class="carriere-container">
+            <div class="carriere-timeline">
+                <div class="carriere-club visible">
+                    <span class="carriere-num">1</span>
+                    <div class="carriere-club-info">
+                        <span class="carriere-club-name">${q.clubs[0].club}</span>
+                        <span class="carriere-club-periode">${q.clubs[0].periode}</span>
+                    </div>
+                </div>
+                ${q.clubs.slice(1).map((c, i) => `
+                    <div class="carriere-club hidden" data-club-idx="${i + 1}">
+                        <span class="carriere-num">${i + 2}</span>
+                        <div class="carriere-club-info">
+                            <span class="carriere-club-name">${c.club}</span>
+                            <span class="carriere-club-periode">${c.periode}</span>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="carriere-actions">
+                <button class="btn btn-outline" id="carriere-pass">Passer / Club suivant (-4 pts)</button>
+                <div class="qsj-input-row">
+                    <input type="text" id="carriere-input" class="qsj-input" placeholder="Nom du joueur..." autofocus>
+                    <button class="btn btn-primary" id="carriere-submit">Deviner</button>
+                </div>
+            </div>
+            <p class="qsj-points-info">Points restants : <strong id="carriere-points-display">${q.points}</strong></p>
+        </div>`;
     }
 
     app().innerHTML = `
@@ -317,7 +353,7 @@ function showQuestion() {
             </div>
             <div class="quiz-body">
                 <div class="question-type-badge">${quizTypeLabels[q.type]?.icon || ''} ${quizTypeLabels[q.type]?.name || q.type}</div>
-                <h2 class="question-text">${q.type === 'qui_suis_je' ? 'Devinez le sportif !' : q.question}</h2>
+                <h2 class="question-text">${q.type === 'qui_suis_je' ? 'Devinez le sportif !' : q.type === 'carriere' ? 'Quel joueur a eu cette carrière ?' : q.question}</h2>
                 ${answersHTML}
             </div>
         </div>
@@ -376,6 +412,35 @@ function showQuestion() {
         document.getElementById('qsj-input').addEventListener('keydown', (e) => {
             if (e.key === 'Enter') submitGuess();
         });
+    } else if (q.type === 'carriere') {
+        let clubsShown = 1;
+        let pointsLeft = q.points;
+
+        document.getElementById('carriere-pass').addEventListener('click', () => {
+            if (clubsShown >= q.clubs.length) return;
+            const nextClub = document.querySelector(`[data-club-idx="${clubsShown}"]`);
+            if (nextClub) {
+                nextClub.classList.remove('hidden');
+                nextClub.classList.add('visible');
+                clubsShown++;
+                pointsLeft = Math.max(5, pointsLeft - 4);
+                document.getElementById('carriere-points-display').textContent = pointsLeft;
+            }
+            if (clubsShown >= q.clubs.length) {
+                document.getElementById('carriere-pass').disabled = true;
+                document.getElementById('carriere-pass').textContent = 'Plus de clubs';
+            }
+        });
+
+        const submitCarriere = () => {
+            const val = document.getElementById('carriere-input').value.trim();
+            if (!val) return;
+            handleAnswer({ guess: val, pointsLeft });
+        };
+        document.getElementById('carriere-submit').addEventListener('click', submitCarriere);
+        document.getElementById('carriere-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') submitCarriere();
+        });
     }
 }
 
@@ -412,6 +477,15 @@ function handleAnswer(userAnswer) {
             el.classList.remove('hidden');
             el.classList.add('visible');
         });
+    } else if (q.type === 'carriere') {
+        document.getElementById('carriere-input').disabled = true;
+        document.getElementById('carriere-submit').disabled = true;
+        document.getElementById('carriere-pass').disabled = true;
+        // Reveal all clubs
+        document.querySelectorAll('.carriere-club.hidden').forEach(el => {
+            el.classList.remove('hidden');
+            el.classList.add('visible');
+        });
     }
 
     // Feedback message
@@ -424,7 +498,7 @@ function handleAnswer(userAnswer) {
             </span>
             ${result.explanation ? `<p class="feedback-explanation">${result.explanation}</p>` : ''}
             ${q.type === 'estimation' && !result.correct ? `<p class="feedback-explanation">La réponse était : ${q.answer} ${q.unit || ''}</p>` : ''}
-            ${q.type === 'qui_suis_je' ? `<p class="feedback-explanation">C'était : <strong>${q.answer}</strong></p>` : ''}
+            ${q.type === 'qui_suis_je' || q.type === 'carriere' ? `<p class="feedback-explanation">C'était : <strong>${q.answer}</strong></p>` : ''}
         </div>
     `;
 
