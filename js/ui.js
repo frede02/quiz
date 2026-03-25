@@ -387,8 +387,8 @@ function showQuestion() {
         let pointsLeft = q.points;
         const container = document.querySelector('.qsj-container');
 
-        document.getElementById('qsj-next-indice').addEventListener('click', () => {
-            if (indicesShown >= q.indices.length) return;
+        const revealNextIndice = () => {
+            if (indicesShown >= q.indices.length) return false;
             const nextIndice = container.querySelector(`[data-idx="${indicesShown}"]`);
             if (nextIndice) {
                 nextIndice.classList.remove('hidden');
@@ -401,12 +401,34 @@ function showQuestion() {
                 document.getElementById('qsj-next-indice').disabled = true;
                 document.getElementById('qsj-next-indice').textContent = 'Plus d\'indices';
             }
-        });
+            return true;
+        };
+
+        document.getElementById('qsj-next-indice').addEventListener('click', revealNextIndice);
 
         const submitGuess = () => {
-            const val = document.getElementById('qsj-input').value.trim();
+            const input = document.getElementById('qsj-input');
+            const val = input.value.trim();
             if (!val) return;
-            handleAnswer({ guess: val, pointsLeft });
+            // Check locally if correct
+            const guess = val.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const answer = q.answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const nameParts = answer.split(' ');
+            const lastName = nameParts[nameParts.length - 1];
+            const isCorrect = guess.includes(answer) || guess.includes(lastName);
+
+            if (isCorrect || indicesShown >= q.indices.length) {
+                handleAnswer({ guess: val, pointsLeft });
+            } else {
+                // Wrong guess: lose points, reveal next indice, show feedback
+                pointsLeft = Math.max(5, pointsLeft - 3);
+                document.getElementById('qsj-points-display').textContent = pointsLeft;
+                revealNextIndice();
+                input.value = '';
+                input.placeholder = 'Mauvaise réponse, réessayez...';
+                input.classList.add('shake');
+                setTimeout(() => input.classList.remove('shake'), 500);
+            }
         };
         document.getElementById('qsj-submit').addEventListener('click', submitGuess);
         document.getElementById('qsj-input').addEventListener('keydown', (e) => {
@@ -416,8 +438,8 @@ function showQuestion() {
         let clubsShown = 1;
         let pointsLeft = q.points;
 
-        document.getElementById('carriere-pass').addEventListener('click', () => {
-            if (clubsShown >= q.clubs.length) return;
+        const revealNextClub = () => {
+            if (clubsShown >= q.clubs.length) return false;
             const nextClub = document.querySelector(`[data-club-idx="${clubsShown}"]`);
             if (nextClub) {
                 nextClub.classList.remove('hidden');
@@ -430,12 +452,34 @@ function showQuestion() {
                 document.getElementById('carriere-pass').disabled = true;
                 document.getElementById('carriere-pass').textContent = 'Plus de clubs';
             }
-        });
+            return true;
+        };
+
+        document.getElementById('carriere-pass').addEventListener('click', revealNextClub);
 
         const submitCarriere = () => {
-            const val = document.getElementById('carriere-input').value.trim();
+            const input = document.getElementById('carriere-input');
+            const val = input.value.trim();
             if (!val) return;
-            handleAnswer({ guess: val, pointsLeft });
+            // Check locally if correct
+            const guess = val.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const answer = q.answer.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const nameParts = answer.split(' ');
+            const lastName = nameParts[nameParts.length - 1];
+            const isCorrect = guess.includes(answer) || guess.includes(lastName);
+
+            if (isCorrect || clubsShown >= q.clubs.length) {
+                handleAnswer({ guess: val, pointsLeft });
+            } else {
+                // Wrong guess: lose points, reveal next club, show feedback
+                pointsLeft = Math.max(5, pointsLeft - 4);
+                document.getElementById('carriere-points-display').textContent = pointsLeft;
+                revealNextClub();
+                input.value = '';
+                input.placeholder = 'Mauvaise réponse, réessayez...';
+                input.classList.add('shake');
+                setTimeout(() => input.classList.remove('shake'), 500);
+            }
         };
         document.getElementById('carriere-submit').addEventListener('click', submitCarriere);
         document.getElementById('carriere-input').addEventListener('keydown', (e) => {

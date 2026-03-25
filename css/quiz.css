@@ -293,6 +293,7 @@
 }
 
 .qsj-input:disabled { opacity: 0.6; }
+.qsj-input.shake, .carriere-input.shake { animation: shakeWrong 0.5s ease; border-color: var(--error) !important; }
 
 .qsj-points-info {
     font-size: 0.9rem;
